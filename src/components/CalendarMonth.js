@@ -54,8 +54,9 @@ class CalendarMonth extends React.Component {
             key={weekday.uuid}
             className={this.getDayClass(weekday.date)}
             onDoubleClick={() => this.handleDoubleClick(week.index, weekday.index, weekday.date)}
-          >
+          > <p>
             {weekday.date.format('D')}
+            </p>
             {weekday.reminders.map((reminder) => (
               <ReminderItem
                 key={reminder.uuid}
